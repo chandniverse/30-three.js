@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particle Sphere</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        #container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+        #info {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: rgb(0, 0, 0);
+            z-index: 100;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        #controls {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: rgb(0, 0, 0);
+            z-index: 100;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="info">
+            <div>Particle Sphere</div>
+            <div>Points: <span id="pointCount">0</span></div>
+        </div>
+        <div id="controls">
+            Mouse: Rotate | Scroll: Zoom
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+     <script type="module" src="script.js"></script>
+
+    
+
+    
+</body>
+</html>

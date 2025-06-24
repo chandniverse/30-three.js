@@ -1,0 +1,242 @@
+[
+  {
+    "id": "project-01",
+    "title": "Basics: Earth and stars",
+    "date": "2025-01-15",
+    "summary": "My first Three.js project! Learning the fundamentals: scene setup, camera positioning, basic geometry, materials, and simple directional lighting.",
+    "preview": "assets/images/previews/project-01.jpg",
+    "technologies": ["Three.js", "WebGL", "Basic Lighting", "Geometry"]
+  },
+  {
+    "id": "project-02",
+    "title": "Interactive Solar System",
+    "date": "2025-01-18",
+    "summary": "Built a miniature solar system with orbiting planets. Learned about object hierarchies, parent-child relationships, and different rotation speeds. Added mouse controls for camera interaction.",
+    "preview": "assets/images/previews/project-02.jpg",
+    "technologies": ["Three.js", "Object3D", "OrbitControls", "Animation"]
+  },
+  {
+    "id": "project-03",
+    "title": "Particle System Galaxy",
+    "date": "2025-01-22",
+    "summary": "Created a swirling galaxy using thousands of particles. Explored BufferGeometry, Points material, and mathematical patterns for positioning particles in spiral formations.",
+    "preview": "assets/images/previews/project-03.jpg",
+    "technologies": ["Three.js", "Particles", "BufferGeometry", "Math"]
+  },
+  {
+    "id": "project-04",
+    "title": "Terrain Generation with Noise",
+    "date": "2025-01-25",
+    "summary": "Generated procedural terrain using Perlin noise. Learned about height maps, vertex manipulation, and creating realistic landscape textures with multiple materials.",
+    "preview": "assets/images/previews/project-04.jpg",
+    "technologies": ["Three.js", "Procedural Generation", "Noise", "Textures"]
+  },
+  {
+    "id": "project-05",
+    "title": "Physics-Based Bouncing Balls",
+    "date": "2025-01-28",
+    "summary": "Integrated Cannon.js physics engine with Three.js. Created realistic bouncing balls with gravity, collision detection, and different material properties affecting bounce behavior.",
+    "preview": "assets/images/previews/project-05.jpg",
+    "technologies": ["Three.js", "Cannon.js", "Physics", "Collision Detection"]
+  },
+  {
+    "id": "project-06",
+    "title": "Water Shader with Waves",
+    "date": "2025-02-01",
+    "summary": "Dove into custom shaders! Created realistic water surface using vertex and fragment shaders. Learned GLSL basics, wave mathematics, and shader uniforms for animation.",
+    "preview": "assets/images/previews/project-06.jpg",
+    "technologies": ["Three.js", "Shaders", "GLSL", "Water Simulation"]
+  },
+  {
+    "id": "project-07",
+    "title": "3D Text with Custom Fonts",
+    "date": "2025-02-04",
+    "summary": "Created extruded 3D text using TextGeometry. Learned about font loading, geometry extrusion parameters, and applying different materials to front, back, and sides.",
+    "preview": "assets/images/previews/project-07.jpg",
+    "technologies": ["Three.js", "TextGeometry", "Fonts", "Extrusion"]
+  },
+  {
+    "id": "project-08",
+    "title": "Volumetric Lighting (God Rays)",
+    "date": "2025-02-07",
+    "summary": "Implemented dramatic volumetric lighting effects. Explored post-processing, render targets, and multiple pass rendering to create atmospheric light beams.",
+    "preview": "assets/images/previews/project-08.jpg",
+    "technologies": ["Three.js", "Post-processing", "Volumetric Lighting", "Render Targets"]
+  },
+  {
+    "id": "project-09",
+    "title": "Morphing Geometric Shapes",
+    "date": "2025-02-10",
+    "summary": "Created smooth transitions between different geometric shapes using morphTargets. Learned about vertex animation and keyframe interpolation for organic transformations.",
+    "preview": "assets/images/previews/project-09.jpg",
+    "technologies": ["Three.js", "Morphing", "Animation", "Geometry Transitions"]
+  },
+  {
+    "id": "project-10",
+    "title": "Interactive Piano with 3D Keys",
+    "date": "2025-02-13",
+    "summary": "Built a playable 3D piano with Web Audio API integration. Combined Three.js visuals with audio synthesis, key press detection, and realistic key animations.",
+    "preview": "assets/images/previews/project-10.jpg",
+    "technologies": ["Three.js", "Web Audio API", "Interaction", "Sound Visualization"]
+  },
+  {
+    "id": "project-11",
+    "title": "Fractal Tree Generation",
+    "date": "2025-02-16",
+    "summary": "Generated beautiful fractal trees using recursive algorithms. Explored L-systems, branch generation, and organic growth patterns with procedural leaf placement.",
+    "preview": "assets/images/previews/project-11.jpg",
+    "technologies": ["Three.js", "Fractals", "Recursion", "Procedural Generation"]
+  },
+  {
+    "id": "project-12",
+    "title": "VR-Ready Room Experience",
+    "date": "2025-02-19",
+    "summary": "Created a WebXR-compatible virtual room. Learned about VR controllers, hand tracking, teleportation, and optimizing scenes for VR performance requirements.",
+    "preview": "assets/images/previews/project-12.jpg",
+    "technologies": ["Three.js", "WebXR", "VR", "Hand Tracking"]
+  },
+  {
+    "id": "project-13",
+    "title": "Cloth Simulation",
+    "date": "2025-02-22",
+    "summary": "Simulated realistic cloth behavior using constraint-based physics. Implemented spring forces, wind effects, and collision detection with other objects in the scene.",
+    "preview": "assets/images/previews/project-13.jpg",
+    "technologies": ["Three.js", "Cloth Physics", "Constraints", "Simulation"]
+  },
+  {
+    "id": "project-14",
+    "title": "Procedural City Generator",
+    "date": "2025-02-25",
+    "summary": "Built an infinite city generator with procedural buildings, roads, and layout. Learned about instanced rendering for performance and algorithmic urban planning.",
+    "preview": "assets/images/previews/project-14.jpg",
+    "technologies": ["Three.js", "Procedural Generation", "Instancing", "Urban Planning"]
+  },
+  {
+    "id": "project-15",
+    "title": "Ray Marching Fractals",
+    "date": "2025-02-28",
+    "summary": "Explored ray marching techniques to render complex fractals like Mandelbulbs. Dove deep into distance functions, lighting calculations, and shader optimization.",
+    "preview": "assets/images/previews/project-15.jpg",
+    "technologies": ["Three.js", "Ray Marching", "Fractals", "Advanced Shaders"]
+  },
+  {
+    "id": "project-16",
+    "title": "Multiplayer Chess Game",
+    "date": "2025-03-03",
+    "summary": "Created a 3D chess game with WebSocket multiplayer support. Implemented game logic, piece movement validation, and real-time synchronization between players.",
+    "preview": "assets/images/previews/project-16.jpg",
+    "technologies": ["Three.js", "WebSocket", "Game Logic", "Multiplayer"]
+  },
+  {
+    "id": "project-17",
+    "title": "Realistic Fire Simulation",
+    "date": "2025-03-06",
+    "summary": "Simulated realistic fire using particle systems and custom shaders. Learned about heat simulation, particle lifecycle management, and volumetric rendering techniques.",
+    "preview": "assets/images/previews/project-17.jpg",
+    "technologies": ["Three.js", "Fire Simulation", "Particles", "Volumetric Rendering"]
+  },
+  {
+    "id": "project-18",
+    "title": "Machine Learning Visualization",
+    "date": "2025-03-09",
+    "summary": "Visualized neural network training in 3D space. Connected TensorFlow.js with Three.js to show real-time weight changes and data flow through network layers.",
+    "preview": "assets/images/previews/project-18.jpg",
+    "technologies": ["Three.js", "TensorFlow.js", "Data Visualization", "AI"]
+  },
+  {
+    "id": "project-19",
+    "title": "Ocean Wave Simulation",
+    "date": "2025-03-12",
+    "summary": "Created realistic ocean waves using FFT-based height fields. Implemented foam generation, underwater caustics, and dynamic reflection/refraction effects.",
+    "preview": "assets/images/previews/project-19.jpg",
+    "technologies": ["Three.js", "FFT", "Ocean Simulation", "Caustics"]
+  },
+  {
+    "id": "project-20",
+    "title": "AR Product Showcase",
+    "date": "2025-03-15",
+    "summary": "Built an AR application for product visualization using WebXR. Implemented plane detection, object anchoring, and realistic lighting integration with real environment.",
+    "preview": "assets/images/previews/project-20.jpg",
+    "technologies": ["Three.js", "WebXR", "AR", "Plane Detection"]
+  },
+  {
+    "id": "project-21",
+    "title": "Flocking Birds Simulation",
+    "date": "2025-03-18",
+    "summary": "Implemented Craig Reynolds' boids algorithm in 3D. Created realistic flocking behavior with separation, alignment, and cohesion rules for hundreds of birds.",
+    "preview": "assets/images/previews/project-21.jpg",
+    "technologies": ["Three.js", "Boids Algorithm", "Flocking", "Behavioral Animation"]
+  },
+  {
+    "id": "project-22",
+    "title": "Holographic Material Effects",
+    "date": "2025-03-21",
+    "summary": "Created stunning holographic and iridescent materials using advanced shader techniques. Explored thin-film interference, rainbow effects, and view-dependent coloring.",
+    "preview": "assets/images/previews/project-22.jpg",
+    "technologies": ["Three.js", "Holographic Shaders", "Iridescence", "Material Science"]
+  },
+  {
+    "id": "project-23",
+    "title": "DNA Double Helix Animation",
+    "date": "2025-03-24",
+    "summary": "Modeled and animated a DNA double helix structure. Learned about biological visualization, parametric curves, and scientific accuracy in 3D representations.",
+    "preview": "assets/images/previews/project-23.jpg",
+    "technologies": ["Three.js", "Scientific Visualization", "Parametric Curves", "Biology"]
+  },
+  {
+    "id": "project-24",
+    "title": "Real-time Weather Visualization",
+    "date": "2025-03-27",
+    "summary": "Connected to weather APIs to create dynamic 3D weather representations. Implemented cloud generation, precipitation effects, and atmospheric scattering.",
+    "preview": "assets/images/previews/project-24.jpg",
+    "technologies": ["Three.js", "Weather API", "Atmospheric Effects", "Real-time Data"]
+  },
+  {
+    "id": "project-25",
+    "title": "Rubik's Cube Solver",
+    "date": "2025-03-30",
+    "summary": "Built an interactive 3D Rubik's cube with solving algorithms. Implemented cube mechanics, rotation animations, and automated solving using layer-by-layer method.",
+    "preview": "assets/images/previews/project-25.jpg",
+    "technologies": ["Three.js", "Algorithm Visualization", "Puzzle Solving", "3D Interaction"]
+  },
+  {
+    "id": "project-26",
+    "title": "Crystalline Growth Simulation",
+    "date": "2025-04-02",
+    "summary": "Simulated crystal formation using diffusion-limited aggregation. Created beautiful organic growth patterns with customizable parameters and real-time visualization.",
+    "preview": "assets/images/previews/project-26.jpg",
+    "technologies": ["Three.js", "Crystal Growth", "DLA Algorithm", "Organic Patterns"]
+  },
+  {
+    "id": "project-27",
+    "title": "Space Debris Tracking",
+    "date": "2025-04-05",
+    "summary": "Visualized real satellite and space debris data in 3D Earth orbit. Connected to TLE databases and implemented orbital mechanics for accurate positioning.",
+    "preview": "assets/images/previews/project-27.jpg",
+    "technologies": ["Three.js", "Orbital Mechanics", "Real Data", "Space Visualization"]
+  },
+  {
+    "id": "project-28",
+    "title": "Quantum Field Visualization",
+    "date": "2025-04-08",
+    "summary": "Attempted to visualize quantum field fluctuations using probability clouds and wave functions. Explored the intersection of physics and visual representation.",
+    "preview": "assets/images/previews/project-28.jpg",
+    "technologies": ["Three.js", "Quantum Physics", "Probability Visualization", "Wave Functions"]
+  },
+  {
+    "id": "project-29",
+    "title": "Architectural Walkthrough",
+    "date": "2025-04-11",
+    "summary": "Created an immersive architectural visualization with realistic materials, lighting, and navigation. Implemented level-of-detail optimization for smooth performance.",
+    "preview": "assets/images/previews/project-29.jpg",
+    "technologies": ["Three.js", "Architecture", "LOD", "Realistic Rendering"]
+  },
+  {
+    "id": "project-30",
+    "title": "Interactive Music Visualizer",
+    "date": "2025-04-14",
+    "summary": "Built a reactive music visualizer that responds to audio frequency data. Combined Web Audio API with dynamic geometries, particles, and shader effects for an immersive experience.",
+    "preview": "assets/images/previews/project-30.jpg",
+    "technologies": ["Three.js", "Web Audio API", "FFT Analysis", "Reactive Visuals"]
+  }
+]

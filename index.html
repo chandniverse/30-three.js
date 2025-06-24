@@ -1,24 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My First Three.js Project</title>
-    <style>
-      body {
-        margin: 0;
-      }
-    </style>
-    <script type="importmap">
-			{
-				"imports": {
-					"three": "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js",
-          "jsm/": "https://cdn.jsdelivr.net/npm/three@0.161.0/examples/jsm/"
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js Learning Journey | 30 Projects</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>Three.js Learning Journey</h1>
+        <p>Exploring the world of 3D web graphics through hands-on projects. Each project represents a new concept learned, challenge overcome, and step forward in mastering Three.js.</p>
+        
+        <div class="stats">
+            <div class="stat">
+                <span class="stat-number" id="projectCount">0</span>
+                <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" id="dayCount">0</span>
+                <span class="stat-label">Days</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" id="conceptCount">0</span>
+                <span class="stat-label">Concepts</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Gallery -->
+    <main class="gallery">
+        <div id="loading" class="loading">
+            <div class="loading-spinner"></div>
+            <p>Loading projects...</p>
+        </div>
+        
+        <div id="gallery-grid" class="gallery-grid" style="display: none;">
+            <!-- Projects will be dynamically loaded here -->
+        </div>
+    </main>
+
+    <script>
+        // Load and display projects
+        async function loadProjects() {
+            try {
+                const response = await fetch('data/projects.json');
+                if (!response.ok) {
+                    throw new Error('Failed to load projects data');
+                }
+                const projects = await response.json();
+                
+                // Hide loading, show gallery
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('gallery-grid').style.display = 'grid';
+                
+                // Update stats
+                updateStats(projects);
+                
+                // Render projects
+                renderProjects(projects);
+                
+            } catch (error) {
+                console.error('Error loading projects:', error);
+                document.getElementById('loading').innerHTML = `
+                    <p>Unable to load projects. Make sure your projects.json file exists in the data folder.</p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.7;">Error: ${error.message}</p>
+                `;
+            }
         }
-			}
-		</script>
-  </head>
-  <body>
-    <script type="module" src="index.js"></script>
-  </body>
+
+        function updateStats(projects) {
+            const projectCount = projects.length;
+            const dayCount = calculateDaySpan(projects);
+            const conceptCount = countUniqueConcepts(projects);
+            
+            animateCounter('projectCount', projectCount);
+            animateCounter('dayCount', dayCount);
+            animateCounter('conceptCount', conceptCount);
+        }
+
+        function calculateDaySpan(projects) {
+            if (projects.length === 0) return 0;
+            const dates = projects.map(p => new Date(p.date));
+            const earliest = new Date(Math.min(...dates));
+            const latest = new Date(Math.max(...dates));
+            return Math.ceil((latest - earliest) / (1000 * 60 * 60 * 24)) + 1;
+        }
+
+        function countUniqueConcepts(projects) {
+            const allTech = projects.flatMap(p => p.technologies || []);
+            return new Set(allTech).size;
+        }
+
+        function animateCounter(elementId, targetValue) {
+            const element = document.getElementById(elementId);
+            let current = 0;
+            const increment = targetValue / 30;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= targetValue) {
+                    element.textContent = targetValue;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+            }, 50);
+        }
+
+        function renderProjects(projects) {
+            const gallery = document.getElementById('gallery-grid');
+            
+            projects.forEach((project, index) => {
+                const card = createProjectCard(project, index);
+                gallery.appendChild(card);
+            });
+        }
+
+        function createProjectCard(project, index) {
+            const card = document.createElement('div');
+            card.className = 'project-card';
+            card.style.animationDelay = `${index * 0.1}s`;
+            
+            // Handle image with fallback
+            const imageContent = project.preview ? 
+                `<img src="${project.preview}" alt="${project.title}" onerror="this.parentElement.innerHTML='<div class=\\'placeholder-image\\'>🎨</div>'">` :
+                `<div class="placeholder-image">🎨</div>`;
+            
+            card.innerHTML = `
+                <div class="card-image">
+                    ${imageContent}
+                    <div class="card-overlay"></div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">${project.title}</h3>
+                    <div class="card-date">${formatDate(project.date)}</div>
+                    <p class="card-summary">${project.summary}</p>
+                    <div class="card-tech">
+                        ${(project.technologies || []).map(tech => 
+                            `<span class="tech-tag">${tech}</span>`
+                        ).join('')}
+                    </div>
+                </div>
+            `;
+            
+            // Add click handler
+            card.addEventListener('click', () => {
+                window.location.href = `projects/${project.id}/`;
+            });
+            
+            return card;
+        }
+
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('en-US', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            });
+        }
+
+        // Load projects when page loads
+        document.addEventListener('DOMContentLoaded', loadProjects);
+    </script>
+</body>
 </html>
